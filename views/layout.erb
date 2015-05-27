@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">Coffee</span>
+        </div>
+        <div class="navbar-right">
+          <ul class="nav navbar-nav">
+            <% if current_user %>
+              <li><a href="/sign_out">Sign out</a></li>
+            <% else %>
+              <li><a href="/auth/foursquare">Sign In</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <hr>
+        <span>Coffee, by Colby</span>
+      </div>
+    </footer>
+  </body>
+</html>
