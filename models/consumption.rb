@@ -7,13 +7,10 @@ module Coffee
     end
 
     def save
-      p drink.caffeine
       Keen.publish(:consumptions, {
         drink: { name: drink.name, size: drink.size.to_i },
         caffeine: drink.caffeine.to_i
       })
-
-      self
     end
   end
 end

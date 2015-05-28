@@ -1,4 +1,10 @@
 Coffee
 ===
 
-keeps track of my caffeine consumption. uses Keen.io to store data and provide charts.
+Logs and reports on your coffee consumption.
+
+## Deploy your own
+
+Coffee can be deployed for free on Heroku Free with a free Keen.io account. You'll probably want to edit coffee.yml with your favorite drinks, as well as their caffeine/oz content.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
