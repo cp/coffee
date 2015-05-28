@@ -1,0 +1,46 @@
+<div id="drinks-per-day"></div>
+<div id="caffeine-per-day"></div>
+<div id="drink-types"></div>
+
+<script type="text/javascript">
+var client = new Keen({
+  projectId: "<%= ENV['KEEN_PROJECT_ID'] %>",
+  readKey: "<%= ENV['KEEN_READ_KEY'] %>"
+});
+
+Keen.ready(function(){
+  var drinks = new Keen.Query("count", {
+    eventCollection: "consumptions",
+    interval: "daily",
+    timeframe: "this_21_days"
+  });
+
+  client.draw(drinks, document.getElementById("drinks-per-day"), {
+    title: "Drinks Per Day",
+    chartType: "columnchart"
+  });
+
+  var caffeine = new Keen.Query("sum", {
+    eventCollection: "consumptions",
+    targetProperty: "caffeine",
+    interval: "daily",
+    timeframe: "this_21_days"
+  });
+  client.draw(caffeine, document.getElementById("caffeine-per-day"), {
+    title: "Caffeine Per Day (mg)",
+    chartType: "columnchart"
+  });
+
+  var drink_types = new Keen.Query("count", {
+    eventCollection: "consumptions",
+    groupBy: "drink.name",
+    timeframe: "this_21_days"
+  });
+  client.draw(drink_types, document.getElementById("drink-types"), {
+    chartType: "piechart",
+    title: "Drink Types (Last Three Weeks)"
+  });
+});
+</script>
+
+

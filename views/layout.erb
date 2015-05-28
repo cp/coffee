@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coffee</title>
+    <script src="/javascripts/keen.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <span class="navbar-brand">Coffee</span>
+          <a href="/" class="navbar-brand">Coffee</a>
         </div>
         <div class="navbar-right">
           <ul class="nav navbar-nav">
             <% if current_user %>
+              <li><a href="/analytics">Analytics</a></li>
               <li><a href="/sign_out">Sign out</a></li>
             <% else %>
               <li><a href="/auth/foursquare">Sign In</a></li>
@@ -25,12 +27,15 @@
       </div>
     </nav>
     <div class="container">
+      <% if flash.has?(:notice) %>
+        <div class="alert alert-info" role="alert"><%= flash[:notice] %></div>
+      <% end %>
       <%= yield %>
     </div>
     <footer class="footer">
       <div class="container">
         <hr>
-        <span>Coffee, by Colby</span>
+        <span>Coffee, by Colby. <a href="https://github.com/colbyaley/coffee">View on Github.</a></span>
       </div>
     </footer>
   </body>

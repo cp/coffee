@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'rack-flash3'
 gem 'sass'
 gem 'compass'
 gem 'bootstrap-sass'
-
+gem 'keen'
 gem 'omniauth'
 gem 'omniauth-foursquare'
 gem 'dotenv'

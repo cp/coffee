@@ -1,0 +1,12 @@
+- name: Cappuccino
+  caffeine: 12.8
+- name: Latte
+  caffeine: 9.6
+- name: Mocha
+  caffeine: 12.7
+- name: Espresso
+  caffeine: 51.3
+- name: Drip
+  caffeine: 20.4
+- name: Americano
+  caffeine: 12.8
