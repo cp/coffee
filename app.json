@@ -1,31 +1,31 @@
 {
-  "name": "Coffee",
-  "description": "Logs and reports on your coffee consumption.",
-  "keywords": [
-    "quantified self",
-    "ruby",
-    "keenio"
-  ],
-  "repository": "https://github.com/ColbyAley/Coffee",
-  "success_url": "/auth/foursquare",
-  "env": {
-    "KEEN_PROJECT_ID": {
-      "description": "Your project ID from Keen.io.",
-    },
-    "KEEN_READ_KEY": {
-      "description": "Keen read key for your Keen.io Project.",
-    },
-    "KEEN_WRITE_KEY": {
-      "description": "Keen write key for your Keen.io Project.",
-    },
-    "ALLOWED_UID": {
-      "description": "Your Foursquare User ID, so that only you can access the app.",
-    },
-    "FOURSQUARE_CLIENT_ID": {
-      "description": "Foursquare Client ID for OAuth.",
-    },
-    "FOURSQUARE_CLIENT_SECRET": {
-      "description": "Foursquare Developer Secret for OAuth.",
-    },
-  }
+    "name": "Coffee",
+    "description": "Logs and reports on your coffee consumption.",
+    "keywords": [
+        "quantified self",
+        "ruby",
+        "keenio"
+    ],
+    "repository": "https://github.com/ColbyAley/Coffee",
+    "success_url": "/auth/foursquare",
+    "env": {
+        "KEEN_PROJECT_ID": {
+            "description": "Your project ID from Keen IO."
+        },
+        "KEEN_READ_KEY": {
+            "description": "Keen IO read key for your Keen IO Project."
+        },
+        "KEEN_WRITE_KEY": {
+            "description": "Keen IO write key for your Keen IO Project."
+        },
+        "ALLOWED_UID": {
+            "description": "Your foursquare User ID, so that only you can access the app."
+        },
+        "FOURSQUARE_CLIENT_ID": {
+            "description": "foursquare Client ID for OAuth."
+        },
+        "FOURSQUARE_CLIENT_SECRET": {
+            "description": "foursquare Developer Secret for OAuth."
+        }        
+    }
 }
